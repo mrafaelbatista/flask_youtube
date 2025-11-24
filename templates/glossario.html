@@ -1,0 +1,29 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+
+<div class="d-flex justify-content-center align-items-center pt-3">
+    <h1>Glossário</h1>
+</div>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Termo</th>
+        <th scope="col">Definição</th>
+        <th scope="col">Ação</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for termo in glossario %}
+        <tr>
+            <th scope="row">{{ loop.index }}</th>
+            <td>{{ termo[0] }}</td>
+            <td>{{ termo[1] }}</td>
+            <td>Sem ação</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
